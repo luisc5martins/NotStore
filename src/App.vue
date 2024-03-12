@@ -1,11 +1,14 @@
 <script setup>
 import ListagemProdutos from '@/components/ListagemProdutos.vue';
 import MenuSuperior from '@/components/MenuSuperior.vue';
+import NaoEUmRodape from './components/NaoEUmRodape.vue';
 </script>
 
 <template>
   <MenuSuperior />
-  <ListagemProdutos />
+  <ListagemProdutos/>
+  <NaoEUmRodape />
+
 </template>
 
 <style scoped>

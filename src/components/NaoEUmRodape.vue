@@ -7,9 +7,8 @@ import Menu from 'vue-material-design-icons/Menu.vue';
 
 const menuAberto = ref(false);
 </script>
-
 <template>
-  <header>
+<footer>
     <div class="header--logo">
       <img src="@/assets/logo.png" alt="Logo" />
       <h1>Not Store</h1>
@@ -28,12 +27,16 @@ const menuAberto = ref(false);
       <CartPlus />
       <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
     </div>
-  </header>
+</footer>
 </template>
-
 <style scoped>
+
+footer {
+background-color: black;
+}
+
 header {
-  background: #fff;
+  background: #f000;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   padding: 0.2rem 1rem;
   display: flex;
@@ -45,18 +48,15 @@ header {
   display: flex;
   align-items: center;
 }
-
 .header--logo img {
   width: 3rem;
   height: 3rem;
   margin-right: 0.5rem;
 }
-
 nav ul {
   display: flex;
   gap: 1rem;
 }
-
 nav li {
   list-style: none;
 }
@@ -65,7 +65,6 @@ nav li {
   display: flex;
   gap: 1rem;
 }
-
 .menu-hamburger {
   display: none;
 }
@@ -74,7 +73,6 @@ nav li {
   nav ul {
     display: none;
   }
-
   .menu-hamburger {
     display: block;
   }
@@ -83,14 +81,13 @@ nav li {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     right: 0;
     text-align: right;
     padding: 10px 16px;
   }
-
   nav .menu li {
     display: block;
     margin-top: 12px;
