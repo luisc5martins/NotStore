@@ -1,17 +1,23 @@
 <script setup>
+import { useScreen } from '@/composables/screen';
+const { isMobile } = useScreen();
+
 import ListagemProdutos from '@/components/ListagemProdutos.vue';
 import MenuSuperior from '@/components/MenuSuperior.vue';
-import NaoEUmRodape from './components/NaoEUmRodape.vue';
+import FooterDesk from './components/FooterDesk.vue';
+import FooterMobile from './components/FooterMobile.vue';
 </script>
 
 <template>
   <MenuSuperior />
   <ListagemProdutos/>
-  <NaoEUmRodape />
+  <FooterDesk v-if="!isMobile"/>
+  <FooterMobile v-if="isMobile"/>
 
 </template>
 
 <style scoped>
+
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -73,4 +79,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style>./components/FooterDesk.vue
