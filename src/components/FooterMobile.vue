@@ -3,9 +3,9 @@
   <footer>
     <div class="footer">
       <div class="background-footer">
-        <button class="button">Home</button>
-        <button class="button">Carrinho</button>
-        <button class="button">Usuário</button>
+        <button class="button">Home</button> |
+        <button class="button">Carrinho</button> |
+        <button class="button">Usuário</button> |
         <button class="button">Sobre</button>
       </div>
     </div>
