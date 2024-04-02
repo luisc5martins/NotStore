@@ -3,7 +3,7 @@ import { defineAsyncComponent, onMounted, onUnmounted, ref, shallowRef } from 'v
 export function useMonitor() {
     const breakpoint = ref('sm');
     const menu = shallowRef(
-        defineAsyncComponent(() => import('../components/MenuSuperiorXs.vue')),
+        defineAsyncComponent(() => import('../components/menu/MenuSuperiorXs.vue')),
     );
 
     const updateBreakpoint = () => {
@@ -11,27 +11,27 @@ export function useMonitor() {
         if (width < 576) {
             breakpoint.value = 'xs';
             menu.value = defineAsyncComponent(() =>
-                import('../components/MenuSuperiorXs.vue'),
+                import('../components/menu/MenuSuperiorXs.vue'),
             );
         } else if (width < 768) {
             breakpoint.value = 'sm';
             menu.value = defineAsyncComponent(() =>
-                import('../components/MenuSuperiorSm.vue'),
+                import('../components/menu/MenuSuperiorSm.vue'),
             );
         } else if (width < 992) {
             breakpoint.value = 'md';
             menu.value = defineAsyncComponent(() =>
-                import('../components/MenuSuperiorMd.vue'),
+                import('../components/menu/MenuSuperiorMd.vue'),
             );
         } else if (width < 1200) {
             breakpoint.value = 'lg';
             menu.value = defineAsyncComponent(() =>
-                import('../components/MenuSuperiorLg.vue'),
+                import('../components/menu/MenuSuperiorLg.vue'),
             );
         } else {
             breakpoint.value = 'xl';
             menu.value = defineAsyncComponent(() =>
-                import('../components/MenuSuperiorXl.vue'),
+                import('../components/menu/MenuSuperiorXl.vue'),
             );
         }
     };

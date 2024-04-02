@@ -1,7 +1,12 @@
 <script setup>
-  import { useMonitor } from '@/composables/monitor';
+import { useScreen } from '@/composables/screen';
+import { useMonitor } from '@/composables/monitor';
+import FooterDesk from './components/footer/FooterDesk.vue';
+import FooterMobile from './components/footer/FooterMobile.vue';
 
-  const { menu } = useMonitor();
+const { isMobile } = useScreen();
+const { menu } = useMonitor();
+
 </script>
 
 <template>
@@ -10,8 +15,7 @@
     <main>
       <router-view />
     </main>
-    <footer>
-      <p>Copyright &copy; 2024</p>
-    </footer>
+    <FooterDesk v-if="!isMobile" />
+    <FooterMobile v-if="isMobile" />
   </div>
 </template>
